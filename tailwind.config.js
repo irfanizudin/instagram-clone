@@ -20,7 +20,7 @@ module.exports = {
         story: "#D92C7D",
       },
       padding: {
-        pageX: "70px",
+        pageX: "200px",
         pageY: "90px",
       },
     },
