@@ -1,3 +1,5 @@
 import Stories from "./Stories";
+import Post from "./Post";
+import PostMore from "./PostMore";
 
-export { Stories };
+export { Stories, Post, PostMore };

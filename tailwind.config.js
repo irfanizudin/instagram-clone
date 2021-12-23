@@ -18,6 +18,7 @@ module.exports = {
         "gray-text": "#8F8F8F",
         link: "#0095F6",
         story: "#D92C7D",
+        liked: "#ED4956",
       },
       padding: {
         pageX: "200px",

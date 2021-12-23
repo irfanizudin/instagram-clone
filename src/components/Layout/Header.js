@@ -29,7 +29,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search"
-            className="bg-gray-bg outline-none text-base text-gray-text ml-2"
+            className="bg-gray-bg outline-none text-base ml-2"
           />
         </div>
         <div className="flex items-center space-x-5">
