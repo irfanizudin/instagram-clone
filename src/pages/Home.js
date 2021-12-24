@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
-import { Post, Stories, Suggestion } from "../components/Home";
+import { FooterHome, Post, Stories, Suggestion } from "../components/Home";
 
 const Home = () => {
   const posts = [
@@ -35,6 +35,7 @@ const Home = () => {
       </div>
       <div className="col-span-1 w-auto h-screen fixed right-[200px] left-[62%]">
         <Suggestion />
+        <FooterHome />
       </div>
     </Layout>
   );
