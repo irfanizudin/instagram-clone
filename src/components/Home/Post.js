@@ -10,7 +10,6 @@ import {
 } from "react-icons/hi";
 import { FiSmile } from "react-icons/fi";
 import Button from "./../Common/Button";
-import PostMore from "./PostMore";
 
 const Post = ({ data }) => {
   const { username, photoProfile, imagePost, captionPost, likeCount, commentCount, datePost } =
@@ -19,6 +18,7 @@ const Post = ({ data }) => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
   const [comment, setComment] = useState("");
+
   return (
     <div className="w-full min-h-screen bg-white border border-gray-text/30 rounded">
       <div className="w-full h-[60px] flex items-center justify-between p-[16px]">

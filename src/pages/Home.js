@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
-import { Post, Stories } from "../components/Home";
+import { Post, Stories, Suggestion } from "../components/Home";
 
 const Home = () => {
   const posts = [
@@ -25,13 +25,16 @@ const Home = () => {
   ];
 
   return (
-    <Layout className="pt-24 pb-10 grid grid-cols-3">
+    <Layout className="pt-24 pb-10 grid grid-cols-3 space-x-6">
       <div className="col-span-2 space-y-6">
         <Stories />
         {posts &&
           posts.map((post, index) => {
             return <Post key={index} data={post} />;
           })}
+      </div>
+      <div className="col-span-1 w-auto h-screen fixed right-[200px] left-[62%]">
+        <Suggestion />
       </div>
     </Layout>
   );
