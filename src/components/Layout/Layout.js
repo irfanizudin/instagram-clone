@@ -5,7 +5,11 @@ const Layout = ({ children, className }) => {
   return (
     <div>
       <Header />
-      <div className={`${className} w-full min-h-screen px-pageX bg-gray-bg `}>{children}</div>
+      <div
+        className={`${className} w-full min-h-screen sm:px-[50px] md:px-[80px] xl:px-[150px] bg-gray-bg `}
+      >
+        {children}
+      </div>
     </div>
   );
 };

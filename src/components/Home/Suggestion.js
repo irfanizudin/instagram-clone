@@ -26,7 +26,7 @@ const Suggestion = () => {
   ];
 
   return (
-    <div className="w-full pt-[16px]">
+    <div className="w-full pt-[16px] hidden lg:block">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img

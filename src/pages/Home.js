@@ -25,15 +25,15 @@ const Home = () => {
   ];
 
   return (
-    <Layout className="pt-24 pb-10 grid grid-cols-3 space-x-6">
-      <div className="col-span-2 space-y-6">
+    <Layout className="pt-14 sm:pt-16 lg:pt-24 pb-10 grid grid-cols-3 space-x-6">
+      <div className="col-span-3 lg:col-span-2 space-y-1 lg:space-y-6">
         <Stories />
         {posts &&
           posts.map((post, index) => {
             return <Post key={index} data={post} />;
           })}
       </div>
-      <div className="col-span-1 w-auto h-screen fixed right-[200px] left-[62%]">
+      <div className="lg:col-span-1 w-auto h-screen fixed lg:right-[80px] xl:right-[150px] lg:left-[65%] xl:left-[67%]">
         <Suggestion />
         <FooterHome />
       </div>

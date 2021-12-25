@@ -37,7 +37,7 @@ const Stories = () => {
   ];
 
   return (
-    <div className="h-[118px] w-full flex items-center p-[16px] bg-white border border-gray-text/30 rounded space-x-3">
+    <div className="h-[118px] w-full overflow-hidden flex items-center p-[16px] bg-white border border-gray-text/30 rounded space-x-3">
       {users &&
         users.map((user, index) => {
           return (

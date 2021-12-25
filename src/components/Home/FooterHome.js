@@ -17,13 +17,13 @@ const FooterHome = () => {
   ];
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 hidden lg:block">
       <div className="flex flex-wrap">
         {links &&
           links.map((link, index) => {
             return (
               <>
-                <Button key={index} className="text-xs text-gray-text/50">
+                <Button key={index} className="text-sm text-gray-text/50">
                   {link}
                 </Button>
                 <p className="text-gray-text/50 mx-1 text-xs"> . </p>

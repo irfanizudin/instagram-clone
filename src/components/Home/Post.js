@@ -20,7 +20,7 @@ const Post = ({ data }) => {
   const [comment, setComment] = useState("");
 
   return (
-    <div className="w-full min-h-screen bg-white border border-gray-text/30 rounded">
+    <div className="w-full bg-white border border-gray-text/30 rounded ">
       <div className="w-full h-[60px] flex items-center justify-between p-[16px]">
         <div className="flex space-x-3 items-center justify-center ">
           <img
