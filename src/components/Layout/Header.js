@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="w-full h-[60px] bg-white px-[20px] md:px-[80px] xl:px-[150px] flex items-center justify-between fixed border-b border-gray-text/30">
+    <div className="w-full h-[60px] bg-white px-[20px] md:px-[80px] xl:px-[150px] flex items-center justify-between fixed border-b border-gray-text/30 z-10">
       <Link to="/">
         <img
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"

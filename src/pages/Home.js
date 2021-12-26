@@ -25,7 +25,7 @@ const Home = () => {
   ];
 
   return (
-    <Layout className="pt-14 sm:pt-16 lg:pt-24 pb-10 grid grid-cols-3 space-x-6">
+    <Layout className="grid grid-cols-3 space-x-6">
       <div className="col-span-3 lg:col-span-2 space-y-1 lg:space-y-6">
         <Stories />
         {posts &&
