@@ -1,5 +1,5 @@
 import React from "react";
-import { ContactList } from "../components/Inbox";
+import { Chat, ContactList } from "../components/Inbox";
 import Layout from "./../components/Layout/Layout";
 
 const Inbox = () => {
@@ -7,6 +7,9 @@ const Inbox = () => {
     <Layout className="max-h-screen grid grid-cols-3">
       <div className="col-span-1">
         <ContactList />
+      </div>
+      <div className="col-span-2">
+        <Chat />
       </div>
     </Layout>
   );
