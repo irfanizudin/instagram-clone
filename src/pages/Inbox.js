@@ -1,5 +1,5 @@
 import React from "react";
-import { Chat, ContactList } from "../components/Inbox";
+import { Chat, ChatRoom, ContactList } from "../components/Inbox";
 import Layout from "./../components/Layout/Layout";
 
 const Inbox = () => {
@@ -9,7 +9,8 @@ const Inbox = () => {
         <ContactList />
       </div>
       <div className="col-span-2">
-        <Chat />
+        {/* <Chat /> */}
+        <ChatRoom />
       </div>
     </Layout>
   );

@@ -61,19 +61,15 @@ const ContactList = () => {
       </div>
 
       <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 p-[16px] space-x-4">
-        <Link to="/direct/inbox" className="uppercase font-medium">
-          primary
-        </Link>
-        <Link to="/direct/inbox/general" className="uppercase font-medium">
-          general
-        </Link>
+        <Button className="uppercase font-medium">primary</Button>
+        <Button className="uppercase font-medium">general</Button>
       </div>
 
-      <div className="w-full h-[420px] overflow-auto p-[16px] space-y-4">
+      <div className="w-full h-[420px] overflow-auto ">
         {contacts &&
           contacts.map((contact) => {
             return (
-              <div className="flex items-center">
+              <div className="w-full flex items-center cursor-pointer px-[16px] py-[10px] hover:bg-gray-100">
                 <img
                   src={contact.image}
                   alt="profile"
