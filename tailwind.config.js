@@ -10,6 +10,7 @@ module.exports = {
       base: ["14px", "18px"],
       lg: ["16px", "24px"],
       xl: ["24px", "32px"],
+      "2xl": ["28px", "34px"],
     },
     extend: {
       colors: {

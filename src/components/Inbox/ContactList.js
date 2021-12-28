@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Common/Button";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SwitchAccount from "./SwitchAccount";
 
 const ContactList = () => {
   const contacts = [
@@ -48,13 +49,19 @@ const ContactList = () => {
     },
   ];
 
+  const [switchAccount, setSwitchAccount] = useState(false);
+  const showSwitch = () => setSwitchAccount(true);
+  const hideSwitch = () => setSwitchAccount(false);
+
   return (
     <div className="w-full h-full bg-white border border-gray-text/30 rounded-l">
       <div className="w-full h-[60px] flex items-center justify-center p-[16px] relative border-b border-gray-text/30">
-        <Button className="text-lg font-medium flex items-center space-x-1">
+        <Button onClick={showSwitch} className="text-lg font-medium flex items-center space-x-1">
           <span>John.doe</span>
           <IoIosArrowDown />
         </Button>
+        {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
+
         <Button className="text-lg absolute right-0 mr-[16px]">
           <FaRegEdit size={24} />
         </Button>
