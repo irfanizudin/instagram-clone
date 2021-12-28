@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SwitchAccount from "./SwitchAccount";
+import NewMessage from "./NewMessage";
 
 const ContactList = () => {
   const contacts = [
@@ -53,6 +54,10 @@ const ContactList = () => {
   const showSwitch = () => setSwitchAccount(true);
   const hideSwitch = () => setSwitchAccount(false);
 
+  const [newMessage, setNewMessage] = useState(false);
+  const showNewMessage = () => setNewMessage(true);
+  const hideNewMessage = () => setNewMessage(false);
+
   return (
     <div className="w-full h-full bg-white border border-gray-text/30 rounded-l">
       <div className="w-full h-[60px] flex items-center justify-center p-[16px] relative border-b border-gray-text/30">
@@ -62,9 +67,10 @@ const ContactList = () => {
         </Button>
         {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
 
-        <Button className="text-lg absolute right-0 mr-[16px]">
+        <Button onClick={showNewMessage} className="text-lg absolute right-0 mr-[16px]">
           <FaRegEdit size={24} />
         </Button>
+        {newMessage && <NewMessage hideNewMessage={hideNewMessage} />}
       </div>
 
       <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 p-[16px] space-x-4">
