@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import Button from "../Common/Button";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import SwitchAccount from "./SwitchAccount";
 import NewMessage from "./NewMessage";
 
-const ContactList = () => {
+const ContactList = ({ showChatRoom }) => {
   const contacts = [
     {
       name: "Ronaldo Lima",
@@ -59,9 +58,9 @@ const ContactList = () => {
   const hideNewMessage = () => setNewMessage(false);
 
   return (
-    <div className="w-full h-full bg-white border border-gray-text/30 rounded-l">
+    <div className="w-full h-full bg-white border rounded-l border-gray-text/30">
       <div className="w-full h-[60px] flex items-center justify-center p-[16px] relative border-b border-gray-text/30">
-        <Button onClick={showSwitch} className="text-lg font-medium flex items-center space-x-1">
+        <Button onClick={showSwitch} className="flex items-center space-x-1 text-lg font-medium">
           <span>John.doe</span>
           <IoIosArrowDown />
         </Button>
@@ -74,15 +73,18 @@ const ContactList = () => {
       </div>
 
       <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 p-[16px] space-x-4">
-        <Button className="uppercase font-medium">primary</Button>
-        <Button className="uppercase font-medium">general</Button>
+        <Button className="font-medium uppercase">primary</Button>
+        <Button className="font-medium uppercase">general</Button>
       </div>
 
       <div className="w-full h-[420px] overflow-auto ">
         {contacts &&
           contacts.map((contact) => {
             return (
-              <div className="w-full flex items-center cursor-pointer px-[16px] py-[10px] hover:bg-gray-100">
+              <div
+                onClick={showChatRoom}
+                className="w-full flex items-center cursor-pointer px-[16px] py-[10px] hover:bg-gray-100"
+              >
                 <img
                   src={contact.image}
                   alt="profile"

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./../Common/Button";
+import SwitchAccount from "./../Inbox/SwitchAccount";
 
 const Suggestion = () => {
   const suggestions = [
@@ -25,6 +26,10 @@ const Suggestion = () => {
     },
   ];
 
+  const [switchAccount, setSwitchAccount] = useState(false);
+  const showSwitch = () => setSwitchAccount(true);
+  const hideSwitch = () => setSwitchAccount(false);
+
   return (
     <div className="w-full pt-[16px] hidden lg:block">
       <div className="flex items-center justify-between">
@@ -39,11 +44,13 @@ const Suggestion = () => {
             <p className="text-base text-gray-text">John Doe</p>
           </div>
         </div>
-        <Button className="text-sm text-link font-medium">Switch</Button>
+        <Button className="text-sm font-medium text-link">Switch</Button>
+        {/* {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
+        <SwitchAccount /> */}
       </div>
       <div className="flex items-center justify-between mt-5">
-        <p className="text-base text-gray-text font-medium">Suggestions For You</p>
-        <Button className="text-sm text-black font-medium">See All</Button>
+        <p className="text-base font-medium text-gray-text">Suggestions For You</p>
+        <Button className="text-sm font-medium text-black">See All</Button>
       </div>
 
       {suggestions &&
@@ -57,13 +64,13 @@ const Suggestion = () => {
                   className="w-[35px] aspect-square rounded-full"
                 />
                 <div className="flex flex-col">
-                  <p className="text-base text-black font-medium">{suggestion.username}</p>
+                  <p className="text-base font-medium text-black">{suggestion.username}</p>
                   <p className="text-sm text-gray-text">
                     Followed by {suggestion.mutualFriend} more
                   </p>
                 </div>
               </div>
-              <Button className="text-sm text-link font-medium">Follow</Button>
+              <Button className="text-sm font-medium text-link">Follow</Button>
             </div>
           );
         })}
