@@ -4,7 +4,7 @@ import { FaPhotoVideo } from "react-icons/fa";
 
 const NewPost = () => {
   return (
-    <div className="min-w-[448px] h-full bg-white border rounded-lg border-gray-text/30">
+    <div className="w-[448px] h-full bg-white border rounded-lg border-gray-text/30">
       <div className="w-full py-[10px] relative border-b border-gray-text/30 flex items-center justify-center">
         <h6 className="text-lg font-medium">Create New Post</h6>
       </div>

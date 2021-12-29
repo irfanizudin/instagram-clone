@@ -8,7 +8,7 @@ const Inbox = () => {
 
   return (
     <>
-      <Layout className="max-h-screen grid grid-cols-3">
+      <Layout className="grid h-screen grid-cols-3">
         <div className="col-span-1">
           <ContactList showChatRoom={showChatRoom} />
         </div>
