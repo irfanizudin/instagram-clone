@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./../Common/Button";
-import SwitchAccount from "./../Inbox/SwitchAccount";
+// import SwitchAccount from "./../Inbox/SwitchAccount";
 
 const Suggestion = () => {
   const suggestions = [
@@ -26,9 +26,9 @@ const Suggestion = () => {
     },
   ];
 
-  const [switchAccount, setSwitchAccount] = useState(false);
-  const showSwitch = () => setSwitchAccount(true);
-  const hideSwitch = () => setSwitchAccount(false);
+  // const [switchAccount, setSwitchAccount] = useState(false);
+  // const showSwitch = () => setSwitchAccount(true);
+  // const hideSwitch = () => setSwitchAccount(false);
 
   return (
     <div className="w-full pt-[16px] hidden lg:block">
@@ -36,7 +36,7 @@ const Suggestion = () => {
         <div className="flex items-center space-x-3">
           <img
             src="https://randomuser.me/api/portraits/men/75.jpg"
-            alt="photo profile"
+            alt="profile"
             className="w-[56px] aspect-square rounded-full"
           />
           <div className="flex flex-col">
@@ -60,7 +60,7 @@ const Suggestion = () => {
               <div className="flex items-center space-x-3">
                 <img
                   src={suggestion.image}
-                  alt="photo-profile"
+                  alt="profile"
                   className="w-[35px] aspect-square rounded-full"
                 />
                 <div className="flex flex-col">

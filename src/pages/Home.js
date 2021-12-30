@@ -17,7 +17,7 @@ const Home = () => {
     {
       username: "amirKhan",
       photoProfile: "https://randomuser.me/api/portraits/men/22.jpg",
-      imagePost: "https://source.unsplash.com/collection/1163637/6",
+      imagePost: "https://source.unsplash.com/collection/1103088/one-color",
       captionPost: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, nulla.",
       likeCount: 1150,
       commentCount: 34,

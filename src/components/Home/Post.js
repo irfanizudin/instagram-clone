@@ -20,15 +20,11 @@ const Post = ({ data }) => {
   const [comment, setComment] = useState("");
 
   return (
-    <div className="w-full bg-white border border-gray-text/30 rounded ">
+    <div className="w-full bg-white border rounded border-gray-text/30 ">
       <div className="w-full h-[60px] flex items-center justify-between p-[16px]">
-        <div className="flex space-x-3 items-center justify-center ">
-          <img
-            src={photoProfile}
-            alt="photo-profile"
-            className="w-[40px] aspect-square rounded-full"
-          />
-          <p className="text-base text-black font-medium">{username}</p>
+        <div className="flex items-center justify-center space-x-3 ">
+          <img src={photoProfile} alt="profile" className="w-[40px] aspect-square rounded-full" />
+          <p className="text-base font-medium text-black">{username}</p>
         </div>
         <Button>
           <HiDotsHorizontal className="text-black" size={20} />
@@ -36,12 +32,12 @@ const Post = ({ data }) => {
       </div>
 
       <div className="w-full h-auto overflow-hidden">
-        <img src={imagePost} alt="post-img" className="w-full" />
+        <img src={imagePost} alt="post" className="w-full" />
       </div>
 
       <div className="w-full p-[16px] space-y-2">
         <div className="flex items-center justify-between">
-          <div className="flex justify-between items-center space-x-4">
+          <div className="flex items-center justify-between space-x-4">
             <Button onClick={() => setLiked(!liked)}>
               {liked ? <HiHeart size={28} className="text-liked" /> : <HiOutlineHeart size={28} />}
             </Button>
@@ -71,12 +67,12 @@ const Post = ({ data }) => {
         <p className="text-[10px] text-gray-text uppercase">{datePost} minutes ago</p>
       </div>
       <div className="h-[53px] border-t border-gray-text/30 p-[16px] flex items-center justify-between">
-        <div className="flex w-full items-center space-x-4">
+        <div className="flex items-center w-full space-x-4">
           <FiSmile size={28} />
           <input
             type="text"
             placeholder="Add a comment..."
-            className="outline-none text-base w-full"
+            className="w-full text-base outline-none"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             required
