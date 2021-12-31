@@ -11,7 +11,7 @@ import {
   HiOutlineHeart,
   HiHeart,
 } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Notification from "./../Notification/Notification";
 import Button from "../Common/Button";
 import ProfileDropdown from "./../Profile/ProfileDropdown";
@@ -22,6 +22,9 @@ const Header = () => {
 
   const [profileDropdown, setProfileDropdown] = useState(false);
   const hideProfileDropdown = () => setProfileDropdown(false);
+
+  const location = useLocation();
+  const pathName = location.pathname;
 
   return (
     <div className="w-full h-[60px] bg-white px-[20px] md:px-[80px] xl:px-[150px] flex items-center justify-between fixed border-b border-gray-text/30 z-10">
@@ -44,16 +47,32 @@ const Header = () => {
         </div>
         <div className="flex items-center space-x-3 md:space-x-4">
           <Link to="/">
-            <HiOutlineHome size={28} stroke="#262626" />
+            {pathName === "/" ? (
+              <HiHome size={28} stroke="#262626" />
+            ) : (
+              <HiOutlineHome size={28} stroke="#262626" />
+            )}
           </Link>
           <Link to="/direct/inbox">
-            <HiOutlineChat size={28} stroke="#262626" />
+            {pathName === "/direct/inbox" ? (
+              <HiChat size={28} stroke="#262626" />
+            ) : (
+              <HiOutlineChat size={28} stroke="#262626" />
+            )}
           </Link>
           <Link to="/create/select">
-            <HiOutlinePlusCircle size={28} stroke="#262626" />
+            {pathName === "/create/select" ? (
+              <HiPlusCircle size={28} stroke="#262626" />
+            ) : (
+              <HiOutlinePlusCircle size={28} stroke="#262626" />
+            )}
           </Link>
           <Link to="/explore">
-            <MdOutlineExplore size={28} stroke="#262626" />
+            {pathName === "/explore" ? (
+              <MdExplore size={28} stroke="#262626" />
+            ) : (
+              <MdOutlineExplore size={28} stroke="#262626" />
+            )}
           </Link>
           <Button onClick={() => setNotification(!notification)}>
             <HiOutlineHeart size={28} stroke="#262626" />

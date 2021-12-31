@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HiOutlineUserCircle,
   HiOutlineBookmark,
   HiOutlineCog,
   HiOutlineSwitchHorizontal,
 } from "react-icons/hi";
+import SwitchAccount from "../Inbox/SwitchAccount";
 
 const ProfileDropdown = ({ hideProfileDropdown }) => {
+  const [switchAccount, setSwitchAccount] = useState(false);
+  const showSwitch = () => setSwitchAccount(true);
+  const hideSwitch = () => setSwitchAccount(false);
+
   return (
     <>
       <div
@@ -26,10 +31,14 @@ const ProfileDropdown = ({ hideProfileDropdown }) => {
           <HiOutlineCog size={18} />
           <p className="text-base ml-3">Settings</p>
         </div>
-        <div className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100">
+        <div
+          onClick={showSwitch}
+          className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100"
+        >
           <HiOutlineSwitchHorizontal size={18} />
           <p className="text-base ml-3">Switch Accounts</p>
         </div>
+        {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
         <div className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100 border border-t border-gray-text/30">
           <p className="text-base">Log Out</p>
         </div>
