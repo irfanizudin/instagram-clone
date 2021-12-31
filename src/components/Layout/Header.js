@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineExplore, MdExplore } from "react-icons/md";
 import {
   HiSearch,
@@ -13,8 +13,16 @@ import {
 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Notification from "./../Notification/Notification";
+import Button from "../Common/Button";
+import ProfileDropdown from "./../Profile/ProfileDropdown";
 
 const Header = () => {
+  const [notification, setNotification] = useState(false);
+  const hideNotification = () => setNotification(false);
+
+  const [profileDropdown, setProfileDropdown] = useState(false);
+  const hideProfileDropdown = () => setProfileDropdown(false);
+
   return (
     <div className="w-full h-[60px] bg-white px-[20px] md:px-[80px] xl:px-[150px] flex items-center justify-between fixed border-b border-gray-text/30 z-10">
       <Link to="/">
@@ -47,8 +55,13 @@ const Header = () => {
           <Link to="/explore">
             <MdOutlineExplore size={28} stroke="#262626" />
           </Link>
-          <HiOutlineHeart size={28} stroke="#262626" className="cursor-pointer" />
-          <div className="rounded-full w-[28px] overflow-hidden cursor-pointer">
+          <Button onClick={() => setNotification(!notification)}>
+            <HiOutlineHeart size={28} stroke="#262626" />
+          </Button>
+          <div
+            onClick={() => setProfileDropdown(!profileDropdown)}
+            className="rounded-full w-[28px] overflow-hidden cursor-pointer"
+          >
             <img
               src="https://randomuser.me/api/portraits/men/75.jpg"
               alt="profile"
@@ -57,8 +70,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      <Notification />
+      {notification && <Notification hideNotification={hideNotification} />}
+      {profileDropdown && <ProfileDropdown hideProfileDropdown={hideProfileDropdown} />}
     </div>
   );
 };
