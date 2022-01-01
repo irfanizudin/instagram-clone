@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./../Common/Button";
-// import SwitchAccount from "./../Inbox/SwitchAccount";
+import SwitchAccount from "./../Inbox/SwitchAccount";
 
 const Suggestion = () => {
   const suggestions = [
@@ -26,9 +26,9 @@ const Suggestion = () => {
     },
   ];
 
-  // const [switchAccount, setSwitchAccount] = useState(false);
-  // const showSwitch = () => setSwitchAccount(true);
-  // const hideSwitch = () => setSwitchAccount(false);
+  const [switchAccount, setSwitchAccount] = useState(false);
+  const showSwitch = () => setSwitchAccount(true);
+  const hideSwitch = () => setSwitchAccount(false);
 
   return (
     <div className="w-full pt-[16px] hidden lg:block">
@@ -44,9 +44,10 @@ const Suggestion = () => {
             <p className="text-base text-gray-text">John Doe</p>
           </div>
         </div>
-        <Button className="text-sm font-medium text-link">Switch</Button>
-        {/* {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
-        <SwitchAccount /> */}
+        <Button onClick={showSwitch} className="text-sm font-medium text-link">
+          Switch
+        </Button>
+        {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
       </div>
       <div className="flex items-center justify-between mt-5">
         <p className="text-base font-medium text-gray-text">Suggestions For You</p>

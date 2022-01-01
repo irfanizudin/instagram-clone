@@ -18,7 +18,7 @@ const ProfileDropdown = ({ hideProfileDropdown }) => {
         onClick={hideProfileDropdown}
         className="w-full h-full bg-transparent fixed top-0 left-0 right-0 bottom-0 z-20 flex items-center justify-center"
       ></div>
-      <div className="w-[230px] h-auto bg-white rounded shadow absolute right-[150px] top-[55px] overflow-auto z-30">
+      <div className="w-[230px] h-auto bg-white rounded shadow absolute right-[4%] sm:right-[2%] md:right-[10%] lg:right-[7%] xl:right-[11%] top-[55px] overflow-auto z-30">
         <div className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100">
           <HiOutlineUserCircle size={18} />
           <p className="text-base ml-3">Profile</p>

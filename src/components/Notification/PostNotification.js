@@ -19,7 +19,7 @@ const PostNotification = ({ type, post }) => {
       </div>
       <img
         src="https://source.unsplash.com/collection/1103088/one-color"
-        alt="photo"
+        alt="post"
         className="w-[45px] aspect-square object-cover"
       />
     </div>

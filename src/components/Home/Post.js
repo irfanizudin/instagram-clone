@@ -10,6 +10,7 @@ import {
 } from "react-icons/hi";
 import { FiSmile } from "react-icons/fi";
 import Button from "./../Common/Button";
+import PostMore from "./PostMore";
 
 const Post = ({ data }) => {
   const { username, photoProfile, imagePost, captionPost, likeCount, commentCount, datePost } =
@@ -29,6 +30,7 @@ const Post = ({ data }) => {
         <Button>
           <HiDotsHorizontal className="text-black" size={20} />
         </Button>
+        <PostMore />
       </div>
 
       <div className="w-full h-auto overflow-hidden">
