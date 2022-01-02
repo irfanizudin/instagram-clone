@@ -1,3 +1,4 @@
 import HeaderProfile from "./HeaderProfile";
+import HighlightProfile from "./HighlightProfile";
 
-export { HeaderProfile };
+export { HeaderProfile, HighlightProfile };
