@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Inbox from "./pages/Inbox";
 import Upload from "./pages/Upload";
 import Explore from "./pages/Explore";
+import Profile from "./pages/Profile";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Route path="/direct/inbox" element={<Inbox />} />
       <Route path="/create/select" element={<Upload />} />
       <Route path="/explore" element={<Explore />} />
+      <Route path="/:username" element={<Profile />} />
     </Routes>
   );
 };

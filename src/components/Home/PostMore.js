@@ -1,9 +1,9 @@
 import React from "react";
 import Modal from "./../Common/Modal";
 
-const PostMore = () => {
+const PostMore = ({ hidePostMore }) => {
   return (
-    <Modal className="overflow-hidden">
+    <Modal onClick={hidePostMore} className="overflow-hidden">
       <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">
         <p className="text-base font-semibold text-liked">Report</p>
       </div>
@@ -25,7 +25,10 @@ const PostMore = () => {
       <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">
         <p className="text-base ">Embed</p>
       </div>
-      <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">
+      <div
+        onClick={hidePostMore}
+        className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100"
+      >
         <p className="text-base ">Cancel</p>
       </div>
     </Modal>

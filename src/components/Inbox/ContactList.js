@@ -58,7 +58,7 @@ const ContactList = ({ showChatRoom }) => {
   const hideNewMessage = () => setNewMessage(false);
 
   return (
-    <div className="w-full h-full bg-white border rounded-l border-gray-text/30">
+    <div className="w-full h-auto bg-white border rounded-l border-gray-text/30">
       <div className="w-full h-[60px] flex items-center justify-center p-[16px] relative border-b border-gray-text/30">
         <Button onClick={showSwitch} className="flex items-center space-x-1 text-lg font-medium">
           <span>John.doe</span>

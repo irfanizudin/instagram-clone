@@ -19,6 +19,8 @@ const Post = ({ data }) => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
   const [comment, setComment] = useState("");
+  const [postMore, setPostMore] = useState(false);
+  const hidePostMore = () => setPostMore(false);
 
   return (
     <div className="w-full bg-white border rounded border-gray-text/30 ">
@@ -27,10 +29,10 @@ const Post = ({ data }) => {
           <img src={photoProfile} alt="profile" className="w-[40px] aspect-square rounded-full" />
           <p className="text-base font-medium text-black">{username}</p>
         </div>
-        <Button>
+        <Button onClick={() => setPostMore(true)}>
           <HiDotsHorizontal className="text-black" size={20} />
         </Button>
-        <PostMore />
+        {postMore && <PostMore hidePostMore={hidePostMore} />}
       </div>
 
       <div className="w-full h-auto overflow-hidden">
