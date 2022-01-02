@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./../Common/Button";
 import { HiOutlineCog } from "react-icons/hi";
+import ChangeProfilePhoto from "./ChangeProfilePhoto";
 
 const HeaderProfile = ({ username }) => {
+  const [changeProfilePhoto, setChangeProfilePhoto] = useState(false);
+  const hideChangeProfilePhoto = () => setChangeProfilePhoto(false);
+
   return (
     <div className="w-full  flex items-start px-[130px]">
       <img
+        onClick={() => setChangeProfilePhoto(true)}
         src="https://randomuser.me/api/portraits/men/75.jpg"
         alt="profile"
         className="w-[150px] aspect-square rounded-full cursor-pointer"
       />
+      {changeProfilePhoto && <ChangeProfilePhoto hideChangeProfilePhoto={hideChangeProfilePhoto} />}
+
       <div className="flex flex-col justify-center ml-[100px]">
         <div className="flex items-center">
           <h5 className="text-2xl font-light">{username}</h5>
