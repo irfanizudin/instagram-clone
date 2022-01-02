@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import Button from "./../Common/Button";
 import { HiOutlineCog } from "react-icons/hi";
 import ChangeProfilePhoto from "./ChangeProfilePhoto";
+import SettingProfile from "./SettingProfile";
 
 const HeaderProfile = ({ username }) => {
   const [changeProfilePhoto, setChangeProfilePhoto] = useState(false);
   const hideChangeProfilePhoto = () => setChangeProfilePhoto(false);
+
+  const [settingProfile, setSettingProfile] = useState(false);
+  const hideSettingProfile = () => setSettingProfile(false);
 
   return (
     <div className="w-full  flex items-start px-[130px]">
@@ -23,9 +27,10 @@ const HeaderProfile = ({ username }) => {
           <Button className="border border-gray-text/30 rounded font-medium py-[6px] px-[10px] ml-5">
             Edit Profile
           </Button>
-          <Button>
+          <Button onClick={() => setSettingProfile(true)}>
             <HiOutlineCog size={28} className="ml-3" />
           </Button>
+          {settingProfile && <SettingProfile hideSettingProfile={hideSettingProfile} />}
         </div>
 
         <div className="flex items-center space-x-10 mt-5">
