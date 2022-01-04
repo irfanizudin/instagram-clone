@@ -5,6 +5,7 @@ import Inbox from "./pages/Inbox";
 import Upload from "./pages/Upload";
 import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
+import Follower from "./components/Profile/Follower";
 
 const App = () => {
   return (
@@ -12,8 +13,10 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/direct/inbox" element={<Inbox />} />
       <Route path="/create/select" element={<Upload />} />
-      <Route path="/explore" element={<Explore />} />
-      <Route path="/:username" element={<Profile />} />
+      <Route path="/explore/" element={<Explore />} />
+      <Route path="/:username" element={<Profile />}>
+        <Route path="followers" element={<Follower />} />
+      </Route>
     </Routes>
   );
 };

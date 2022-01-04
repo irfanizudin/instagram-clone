@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import { ExplorePost } from "../components/Explore";
 import Layout from "../components/Layout/Layout";
 
@@ -49,6 +50,7 @@ const Explore = () => {
             <ExplorePost key={index} image={post.image} liked={post.liked} comment={post.comment} />
           );
         })}
+      <Outlet />
     </Layout>
   );
 };
