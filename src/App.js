@@ -5,7 +5,7 @@ import Inbox from "./pages/Inbox";
 import Upload from "./pages/Upload";
 import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
-import Follower from "./components/Profile/Follower";
+import Post from "./components/Profile/Post";
 
 const App = () => {
   return (
@@ -15,7 +15,11 @@ const App = () => {
       <Route path="/create/select" element={<Upload />} />
       <Route path="/explore/" element={<Explore />} />
       <Route path="/:username" element={<Profile />}>
-        <Route path="followers" element={<Follower />} />
+        <Route path="" element={<Post />} />
+        <Route path="reels" element={<p>Reels</p>} />
+        <Route path="channel" element={<p>Videos</p>} />
+        <Route path="saved" element={<p>Saved</p>} />
+        <Route path="tagged" element={<p>Tagged</p>} />
       </Route>
     </Routes>
   );

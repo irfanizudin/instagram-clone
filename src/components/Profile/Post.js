@@ -1,8 +1,7 @@
 import React from "react";
-import { ExplorePost } from "../components/Explore";
-import Layout from "../components/Layout/Layout";
+import { ExplorePost } from "../Explore";
 
-const Explore = () => {
+const Post = () => {
   const Posts = [
     {
       image: "https://source.unsplash.com/collection/1103088/one-color",
@@ -42,15 +41,15 @@ const Explore = () => {
   ];
 
   return (
-    <Layout className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 pt-20">
+    <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-3">
       {Posts &&
         Posts.map((post, index) => {
           return (
             <ExplorePost key={index} image={post.image} liked={post.liked} comment={post.comment} />
           );
         })}
-    </Layout>
+    </div>
   );
 };
 
-export default Explore;
+export default Post;
