@@ -9,6 +9,7 @@ import Post from "./components/Profile/Post";
 import Reels from "./components/Profile/Reels";
 import Videos from "./components/Profile/Videos";
 import Saved from "./components/Profile/Saved";
+import Tagged from "./components/Profile/Tagged";
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
         <Route path="reels" element={<Reels />} />
         <Route path="channel" element={<Videos />} />
         <Route path="saved" element={<Saved />} />
-        <Route path="tagged" element={<p>Tagged</p>} />
+        <Route path="tagged" element={<Tagged />} />
       </Route>
     </Routes>
   );
