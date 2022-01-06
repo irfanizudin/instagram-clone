@@ -1,7 +1,7 @@
 import React from "react";
 import VideoPost from "./VideoPost";
 
-const Reels = () => {
+const Videos = () => {
   const Videos = [
     {
       image: "https://source.unsplash.com/collection/9389477/tokyo",
@@ -48,13 +48,13 @@ const Reels = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-3">
+    <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-3">
       {Videos &&
         Videos.map((video, index) => {
           return (
             <VideoPost
               key={index}
-              className="w-[212px] h-[330px]"
+              className="max-w-[300px] aspect-square"
               image={video.image}
               liked={video.liked}
               comment={video.comment}
@@ -66,4 +66,4 @@ const Reels = () => {
   );
 };
 
-export default Reels;
+export default Videos;

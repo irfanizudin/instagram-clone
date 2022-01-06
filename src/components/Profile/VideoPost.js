@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { HiHeart } from "react-icons/hi";
 import { BsFillChatFill, BsFillPlayFill } from "react-icons/bs";
 
-const VideoPost = ({ image, liked, comment, play }) => {
+const VideoPost = ({ image, liked, comment, play, className }) => {
   const [hover, setHover] = useState(false);
 
   return (
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="w-[212px] h-[330px] aspect-square overflow-hidden cursor-pointer relative mx-auto"
+      className={`${className} overflow-hidden cursor-pointer relative mx-auto`}
     >
       <img src={image} alt="video-post" className="object-cover w-full h-full" />
       <div className={`${hover ? "hidden" : "flex"} absolute bottom-3 left-3 items-center`}>

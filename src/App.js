@@ -7,6 +7,7 @@ import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
 import Post from "./components/Profile/Post";
 import Reels from "./components/Profile/Reels";
+import Videos from "./components/Profile/Videos";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
       <Route path="/:username" element={<Profile />}>
         <Route path="" element={<Post />} />
         <Route path="reels" element={<Reels />} />
-        <Route path="channel" element={<p>Videos</p>} />
+        <Route path="channel" element={<Videos />} />
         <Route path="saved" element={<p>Saved</p>} />
         <Route path="tagged" element={<p>Tagged</p>} />
       </Route>
