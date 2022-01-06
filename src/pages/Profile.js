@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { HeaderProfile, HighlightProfile, PostProfile } from "../components/Profile";
+import { FooterProfile, HeaderProfile, HighlightProfile, PostProfile } from "../components/Profile";
 import Layout from "./../components/Layout/Layout";
 
 const Profile = () => {
@@ -11,6 +11,7 @@ const Profile = () => {
       <HeaderProfile username={username} />
       <HighlightProfile />
       <PostProfile />
+      <FooterProfile />
     </Layout>
   );
 };
