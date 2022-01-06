@@ -6,6 +6,7 @@ import Upload from "./pages/Upload";
 import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
 import Post from "./components/Profile/Post";
+import Reels from "./components/Profile/Reels";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
       <Route path="/explore/" element={<Explore />} />
       <Route path="/:username" element={<Profile />}>
         <Route path="" element={<Post />} />
-        <Route path="reels" element={<p>Reels</p>} />
+        <Route path="reels" element={<Reels />} />
         <Route path="channel" element={<p>Videos</p>} />
         <Route path="saved" element={<p>Saved</p>} />
         <Route path="tagged" element={<p>Tagged</p>} />

@@ -27,10 +27,13 @@ const ProfileDropdown = ({ hideProfileDropdown }) => {
           <HiOutlineUserCircle size={18} />
           <p className="text-base ml-3">Profile</p>
         </Link>
-        <div className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100">
+        <Link
+          to="/johnDoe/saved"
+          className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100"
+        >
           <HiOutlineBookmark size={18} />
           <p className="text-base ml-3">Saved</p>
-        </div>
+        </Link>
         <div className="w-full flex items-center py-[10px] px-[16px] cursor-pointer hover:bg-gray-100">
           <HiOutlineCog size={18} />
           <p className="text-base ml-3">Settings</p>
