@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Post from "./components/Profile/Post";
 import Reels from "./components/Profile/Reels";
 import Videos from "./components/Profile/Videos";
+import Saved from "./components/Profile/Saved";
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
         <Route path="" element={<Post />} />
         <Route path="reels" element={<Reels />} />
         <Route path="channel" element={<Videos />} />
-        <Route path="saved" element={<p>Saved</p>} />
+        <Route path="saved" element={<Saved />} />
         <Route path="tagged" element={<p>Tagged</p>} />
       </Route>
     </Routes>
