@@ -2,8 +2,9 @@ import React from "react";
 import Button from "./../Common/Button";
 import { HiX } from "react-icons/hi";
 import Modal from "./../Common/Modal";
+import { useNavigate } from "react-router-dom";
 
-const Following = ({ hideFollowing }) => {
+const Following = () => {
   const following = [
     {
       name: "Ronaldo Lima",
@@ -47,11 +48,13 @@ const Following = ({ hideFollowing }) => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
-    <Modal onClick={hideFollowing} className="overflow-hidden">
+    <Modal onClick={() => navigate("/johnDoe")} className="overflow-hidden">
       <div className="w-full py-[10px] relative border-b border-gray-text/30 flex items-center justify-center">
         <h6 className="text-lg font-medium">Following</h6>
-        <Button onClick={hideFollowing} className="absolute right-[16px]">
+        <Button onClick={() => navigate("/johnDoe")} className="absolute right-[16px]">
           <HiX className="text-xl" />
         </Button>
       </div>

@@ -3,8 +3,7 @@ import Button from "./../Common/Button";
 import { HiOutlineCog } from "react-icons/hi";
 import ChangeProfilePhoto from "./ChangeProfilePhoto";
 import SettingProfile from "./SettingProfile";
-import Follower from "./Follower";
-import Following from "./Following";
+import { useNavigate } from "react-router-dom";
 
 const HeaderProfile = ({ username }) => {
   const [changeProfilePhoto, setChangeProfilePhoto] = useState(false);
@@ -13,12 +12,7 @@ const HeaderProfile = ({ username }) => {
   const [settingProfile, setSettingProfile] = useState(false);
   const hideSettingProfile = () => setSettingProfile(false);
 
-  const [follower, setFollower] = useState(false);
-  const hideFollower = () => setFollower(false);
-
-  const [following, setFollowing] = useState(false);
-  const hideFollowing = () => setFollowing(false);
-
+  const navigate = useNavigate();
   return (
     <div className="w-full  flex items-start px-[130px]">
       <img
@@ -45,15 +39,13 @@ const HeaderProfile = ({ username }) => {
           <p className="text-lg">
             <span className="font-medium">12</span> posts
           </p>
-          <p onClick={() => setFollower(true)} className="text-lg cursor-pointer">
+          <p onClick={() => navigate("followers")} className="text-lg cursor-pointer">
             <span className="font-medium">443</span> followers
           </p>
-          <p onClick={() => setFollowing(true)} className="text-lg cursor-pointer">
+          <p onClick={() => navigate("following")} className="text-lg cursor-pointer">
             <span className="font-medium">176</span> following
           </p>
         </div>
-        {follower && <Follower hideFollower={hideFollower} />}
-        {following && <Following hideFollowing={hideFollowing} />}
 
         <div className="flex flex-col mt-5">
           <h6 className="text-lg font-medium">John Doe</h6>

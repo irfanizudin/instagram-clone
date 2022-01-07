@@ -3,7 +3,7 @@ import Button from "../Common/Button";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
 import SwitchAccount from "./SwitchAccount";
-import NewMessage from "./NewMessage";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ContactList = ({ showChatRoom }) => {
   const contacts = [
@@ -53,9 +53,8 @@ const ContactList = ({ showChatRoom }) => {
   const showSwitch = () => setSwitchAccount(true);
   const hideSwitch = () => setSwitchAccount(false);
 
-  const [newMessage, setNewMessage] = useState(false);
-  const showNewMessage = () => setNewMessage(true);
-  const hideNewMessage = () => setNewMessage(false);
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   return (
     <div className="w-full h-auto bg-white border rounded-l border-gray-text/30">
@@ -66,15 +65,33 @@ const ContactList = ({ showChatRoom }) => {
         </Button>
         {switchAccount && <SwitchAccount hideSwitch={hideSwitch} />}
 
-        <Button onClick={showNewMessage} className="text-lg absolute right-0 mr-[16px]">
+        <Button
+          onClick={() => navigate("/direct/new")}
+          className="text-lg absolute right-0 mr-[16px]"
+        >
           <FaRegEdit size={24} />
         </Button>
-        {newMessage && <NewMessage hideNewMessage={hideNewMessage} />}
       </div>
 
-      <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 p-[16px] space-x-4">
-        <Button className="font-medium uppercase">primary</Button>
-        <Button className="font-medium uppercase">general</Button>
+      <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 space-x-4">
+        <Button
+          onClick={() => navigate("inbox")}
+          className={`${
+            pathname === "/direct/inbox" ? "text-black border-b border-black" : "text-gray-text"
+          } h-full font-medium uppercase p-[16px]`}
+        >
+          primary
+        </Button>
+        <Button
+          onClick={() => navigate("inbox/general")}
+          className={`${
+            pathname === "/direct/inbox/general"
+              ? "text-black border-b border-black"
+              : "text-gray-text"
+          } h-full font-medium uppercase p-[16px]`}
+        >
+          general
+        </Button>
       </div>
 
       <div className="w-full h-[420px] overflow-auto ">

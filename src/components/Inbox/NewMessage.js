@@ -2,8 +2,9 @@ import React from "react";
 import Button from "../Common/Button";
 import Modal from "./../Common/Modal";
 import { HiX, HiCheckCircle } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
-const NewMessage = ({ hideNewMessage }) => {
+const NewMessage = () => {
   const contacts = [
     {
       name: "Ronaldo Lima",
@@ -47,11 +48,13 @@ const NewMessage = ({ hideNewMessage }) => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
-    <Modal onClick={hideNewMessage}>
+    <Modal onClick={() => navigate("/direct/inbox")}>
       <div className="w-full py-[10px] relative border-b border-gray-text/30 flex items-center justify-center">
         <h6 className="text-lg font-medium">New Message</h6>
-        <Button onClick={hideNewMessage} className="absolute left-[16px]">
+        <Button onClick={() => navigate("/direct/inbox")} className="absolute left-[16px]">
           <HiX className="text-xl" />
         </Button>
       </div>

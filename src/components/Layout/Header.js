@@ -25,6 +25,7 @@ const Header = () => {
 
   const location = useLocation();
   const pathName = location.pathname;
+  const direct = pathName.split("/").includes("direct");
 
   return (
     <div className="w-full h-[60px] bg-white px-[20px] md:px-[80px] xl:px-[150px] flex items-center justify-between fixed border-b border-gray-text/30 z-10">
@@ -54,7 +55,7 @@ const Header = () => {
             )}
           </Link>
           <Link to="/direct/inbox">
-            {pathName === "/direct/inbox" ? (
+            {direct ? (
               <HiChat size={28} stroke="#262626" />
             ) : (
               <HiOutlineChat size={28} stroke="#262626" />

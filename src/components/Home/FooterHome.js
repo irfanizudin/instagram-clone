@@ -31,7 +31,7 @@ const FooterHome = () => {
             );
           })}
       </div>
-      <p className="text-gray-text/50 text-xs uppercase mt-4">&copy; 2021 instagram from meta</p>
+      <p className="text-gray-text/50 text-xs uppercase mt-4">&copy; 2022 instagram from meta</p>
     </div>
   );
 };

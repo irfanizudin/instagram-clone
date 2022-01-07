@@ -10,7 +10,6 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 
 const PostProfile = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <div className="w-full mt-10">
