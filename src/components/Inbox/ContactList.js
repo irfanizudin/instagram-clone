@@ -99,7 +99,7 @@ const ContactList = ({ showChatRoom }) => {
           contacts.map((contact) => {
             return (
               <div
-                onClick={showChatRoom}
+                onClick={() => navigate(`t/${contact.name}`)}
                 className="w-full flex items-center cursor-pointer px-[16px] py-[10px] hover:bg-gray-100"
               >
                 <img

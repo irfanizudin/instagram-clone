@@ -3,10 +3,12 @@ import Button from "../Common/Button";
 import { HiOutlineInformationCircle, HiOutlineHeart } from "react-icons/hi";
 import { FiSmile } from "react-icons/fi";
 import { RiGalleryLine } from "react-icons/ri";
+import { useParams } from "react-router-dom";
 
 const ChatRoom = () => {
   const [text, setText] = useState("");
 
+  const { name } = useParams();
   return (
     <div className="relative flex flex-col w-full h-full bg-white border border-l-0 rounded-r">
       <div className="w-full h-[60px] py-[16px] px-[32px] flex items-center justify-between border-b border-gray-text/30">
@@ -16,7 +18,7 @@ const ChatRoom = () => {
             alt="profile"
             className="w-[30px] aspect-square rounded-full"
           />
-          <p className="ml-3 text-lg font-medium">Ronaldo Lima</p>
+          <p className="ml-3 text-lg font-medium">{name}</p>
         </div>
         <Button>
           <HiOutlineInformationCircle size={26} />

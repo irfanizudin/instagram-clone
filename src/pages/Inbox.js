@@ -8,6 +8,7 @@ const Inbox = () => {
   const showChatRoom = () => setChatRoom(true);
 
   const { pathname } = useLocation();
+  const direct = pathname.split("/").includes("direct");
   return (
     <>
       <Layout className="grid h-screen grid-cols-3">
@@ -17,7 +18,7 @@ const Inbox = () => {
         <div className="col-span-2">
           <Outlet />
         </div>
-        {pathname === "/direct/inbox" || pathname === "/direct/inbox/general" ? "" : <Outlet />}
+        {direct ? "" : <Outlet />}
       </Layout>
     </>
   );

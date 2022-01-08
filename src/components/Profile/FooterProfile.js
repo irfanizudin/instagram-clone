@@ -18,8 +18,8 @@ const FooterProfile = () => {
   ];
 
   return (
-    <div className="w-full text-sm text-gray-text mt-5">
-      <div className="flex items-center justify-center space-x-4">
+    <div className="w-full text-sm text-gray-text mt-5 px-[15px]">
+      <div className="flex flex-wrap items-center justify-center space-x-4">
         {links &&
           links.map((link, index) => {
             return <Button key={index}>{link}</Button>;

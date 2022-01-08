@@ -7,7 +7,7 @@ const Profile = () => {
   const { username } = useParams();
 
   return (
-    <Layout>
+    <Layout className="pt-24 sm:pt-24">
       <HeaderProfile username={username} />
       <HighlightProfile />
       <PostProfile />

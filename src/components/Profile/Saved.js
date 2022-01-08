@@ -43,7 +43,7 @@ const Saved = () => {
 
   return (
     <div className="mt-3">
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex items-center justify-between px-[15px]">
         <p className="text-sm text-gray-text">Only you can see what you've saved</p>
         <Button className="text-link font-medium">+ New Collection</Button>
       </div>

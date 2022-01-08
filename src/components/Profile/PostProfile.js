@@ -13,51 +13,61 @@ const PostProfile = () => {
 
   return (
     <div className="w-full mt-10">
-      <div className="w-full h-[50px] border-t border-gray-text/30 flex items-center justify-center space-x-14">
+      <div className="w-full h-[50px] border-b border-t sm:border-b-0 border-gray-text/30 flex items-center justify-center space-x-14">
         <Link
           to=""
           className={`${
-            pathname === "/johnDoe" ? "font-medium border-t border-black" : "text-gray-text"
+            pathname === "/johnDoe"
+              ? "text-link sm:text-black font-medium sm:border-t sm:border-black"
+              : "text-gray-text"
           } flex items-center h-full`}
         >
-          <BsGrid3X3 size={12} />
-          <p className="uppercase text-sm ml-2 tracking-widest">posts</p>
+          <BsGrid3X3 className="text-lg sm:text-base" />
+          <p className="hidden sm:block uppercase text-sm ml-2 tracking-widest">posts</p>
         </Link>
         <Link
           to="reels"
           className={`${
-            pathname === "/johnDoe/reels" ? "font-medium border-t border-black" : "text-gray-text"
+            pathname === "/johnDoe/reels"
+              ? "text-link sm:text-black font-medium sm:border-t sm:border-black"
+              : "text-gray-text"
           } flex items-center h-full`}
         >
-          <MdOndemandVideo size={12} />
-          <p className="uppercase text-sm ml-2 tracking-widest">reels</p>
+          <MdOndemandVideo className="text-lg sm:text-base" />
+          <p className="hidden sm:block uppercase text-sm ml-2 tracking-widest">reels</p>
         </Link>
         <Link
           to="channel"
           className={`${
-            pathname === "/johnDoe/channel" ? "font-medium border-t border-black" : "text-gray-text"
+            pathname === "/johnDoe/channel"
+              ? "text-link sm:text-black font-medium sm:border-t sm:border-black"
+              : "text-gray-text"
           } flex items-center h-full`}
         >
-          <MdSlowMotionVideo size={12} />
-          <p className="uppercase text-sm ml-2 tracking-widest">videos</p>
+          <MdSlowMotionVideo className="text-lg sm:text-base" />
+          <p className="hidden sm:block uppercase text-sm ml-2 tracking-widest">videos</p>
         </Link>
         <Link
           to="saved"
           className={`${
-            pathname === "/johnDoe/saved" ? "font-medium border-t border-black" : "text-gray-text"
+            pathname === "/johnDoe/saved"
+              ? "text-link sm:text-black font-medium sm:border-t sm:border-black"
+              : "text-gray-text"
           } flex items-center h-full`}
         >
-          <MdOutlineBookmarkBorder size={12} />
-          <p className="uppercase text-sm ml-2 tracking-widest">saved</p>
+          <MdOutlineBookmarkBorder className="text-lg sm:text-base" />
+          <p className="hidden sm:block uppercase text-sm ml-2 tracking-widest">saved</p>
         </Link>
         <Link
           to="tagged"
           className={`${
-            pathname === "/johnDoe/tagged" ? "font-medium border-t border-black" : "text-gray-text"
+            pathname === "/johnDoe/tagged"
+              ? "text-link sm:text-black font-medium sm:border-t sm:border-black"
+              : "text-gray-text"
           } flex items-center h-full`}
         >
-          <MdOutlineAccountBox size={12} />
-          <p className="uppercase text-sm ml-2 tracking-widest">tagged</p>
+          <MdOutlineAccountBox className="text-lg sm:text-base" />
+          <p className="hidden sm:block uppercase text-sm ml-2 tracking-widest">tagged</p>
         </Link>
       </div>
       <Outlet />

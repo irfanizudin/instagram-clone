@@ -33,19 +33,21 @@ const HighlightProfile = () => {
   ];
 
   return (
-    <div className="h-[118px] w-full overflow-hidden flex items-center px-[100px] space-x-12 mt-10">
+    <div className="h-[118px] w-full overflow-hidden flex items-center px-[15px] lg:px-[100px] space-x-4 sm:space-x-12 mt-10">
       {highlights &&
         highlights.map((highlight, index) => {
           return (
             <div key={index} className="flex flex-col items-center justify-center cursor-pointer">
-              <div className="w-[87px] aspect-square border border-gray-text/30 rounded-full overflow-hidden flex items-center justify-center">
+              <div className="w-[64px] sm:w-[87px] aspect-square border border-gray-text/30 rounded-full overflow-hidden flex items-center justify-center">
                 <img
                   src={highlight.image}
                   alt="stories"
-                  className="object-cover w-[77px] aspect-square rounded-full"
+                  className="object-cover w-[54px] sm:w-[77px] aspect-square rounded-full"
                 />
               </div>
-              <p className="text-base font-medium mt-3">{highlight.name}</p>
+              <p className="text-sm sm:text-base sm:font-medium mt-3 text-center">
+                {highlight.name}
+              </p>
             </div>
           );
         })}

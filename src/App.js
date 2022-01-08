@@ -26,6 +26,7 @@ const App = () => {
           <Route path="general" element={<ChatGeneral />} />
         </Route>
         <Route path="new" element={<NewMessage />} />
+        <Route path="t/:name" element={<ChatRoom />} />
       </Route>
       <Route path="/create/select" element={<Upload />} />
       <Route path="/explore/" element={<Explore />} />
