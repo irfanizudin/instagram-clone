@@ -4,39 +4,40 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
+import { useNavigate } from "react-router-dom";
 
 const Stories = () => {
   const users = [
     {
-      name: "John Doe",
+      username: "johnDoe",
       image: "https://randomuser.me/api/portraits/men/75.jpg",
     },
     {
-      name: "Albert Doe",
+      username: "AlbertDoe",
       image: "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
-      name: "John Chris",
+      username: "John.Chris",
       image: "https://randomuser.me/api/portraits/men/1.jpg",
     },
     {
-      name: "Albert Doe",
+      username: "AlbertDoe",
       image: "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
-      name: "John Chris",
+      username: "John.Chris",
       image: "https://randomuser.me/api/portraits/men/1.jpg",
     },
     {
-      name: "John Doe",
+      username: "johnDoe",
       image: "https://randomuser.me/api/portraits/men/75.jpg",
     },
     {
-      name: "Albert Doe",
+      username: "AlbertDoe",
       image: "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
-      name: "John Chris",
+      username: "John.Chris",
       image: "https://randomuser.me/api/portraits/men/1.jpg",
     },
   ];
@@ -72,6 +73,8 @@ const Stories = () => {
     ],
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="h-[118px] w-full relative overflow-hidden">
       <Slider
@@ -81,7 +84,11 @@ const Stories = () => {
         {users &&
           users.map((user, index) => {
             return (
-              <div key={index} className="flex flex-col items-center justify-center cursor-pointer">
+              <div
+                onClick={() => navigate(`/stories/${user.username}/1`)}
+                key={index}
+                className="flex flex-col items-center justify-center cursor-pointer"
+              >
                 <div className="w-[66px] aspect-square border-2 border-story rounded-full overflow-hidden flex items-center justify-center">
                   <img
                     src={user.image}
@@ -89,7 +96,7 @@ const Stories = () => {
                     className="object-cover w-[56px] aspect-square rounded-full"
                   />
                 </div>
-                <p className="text-sm text-black">{user.name}</p>
+                <p className="text-sm text-black">{user.username}</p>
               </div>
             );
           })}

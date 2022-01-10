@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
 import { FooterHome, Post, Stories, Suggestion } from "../components/Home";
-import SwitchAccount from "./../components/Inbox/SwitchAccount";
 
 const Home = () => {
   const posts = [

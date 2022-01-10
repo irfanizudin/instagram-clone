@@ -8,7 +8,7 @@ const PrevArrow = ({ onClick }) => {
       onClick={onClick}
       className={`${
         onClick === null ? "hidden" : "block"
-      } shadow-md text-gray-text text-xl absolute top-1/2 left-2 -translate-y-1/2 z-[2] rounded-full`}
+      } text-gray-text text-xl absolute top-1/2 left-2 -translate-y-1/2 z-[2] rounded-full`}
     >
       <IoIosArrowDropleftCircle />
     </Button>

@@ -5,7 +5,7 @@ import { FaRegEdit } from "react-icons/fa";
 import SwitchAccount from "./SwitchAccount";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const ContactList = ({ showChatRoom }) => {
+const ContactList = () => {
   const contacts = [
     {
       name: "Ronaldo Lima",

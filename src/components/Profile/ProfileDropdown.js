@@ -6,7 +6,7 @@ import {
   HiOutlineSwitchHorizontal,
 } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import SwitchAccount from "../Inbox/SwitchAccount";
+import { SwitchAccount } from "../Inbox";
 
 const ProfileDropdown = ({ hideProfileDropdown }) => {
   const [switchAccount, setSwitchAccount] = useState(false);

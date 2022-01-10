@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./../Common/Button";
-import SwitchAccount from "./../Inbox/SwitchAccount";
+import { SwitchAccount } from "./../Inbox";
 
 const Suggestion = () => {
   const suggestions = [

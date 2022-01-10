@@ -2,8 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import NextArrow from "./../Home/NextArrow";
-import PrevArrow from "./../Home/PrevArrow";
+import { NextArrow, PrevArrow } from "./../Home";
 
 const HighlightProfile = () => {
   const highlights = [

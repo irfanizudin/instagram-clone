@@ -9,12 +9,11 @@ import {
   HiOutlinePlusCircle,
   HiPlusCircle,
   HiOutlineHeart,
-  HiHeart,
 } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import Notification from "./../Notification/Notification";
 import Button from "../Common/Button";
-import ProfileDropdown from "./../Profile/ProfileDropdown";
+import { ProfileDropdown } from "./../Profile";
 
 const Header = () => {
   const [notification, setNotification] = useState(false);

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Common/Button";
 import Modal from "./../Common/Modal";
-import { HiX, HiCheckCircle } from "react-icons/hi";
+import { HiX } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
 const NewMessage = () => {
