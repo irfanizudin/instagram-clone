@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Common/Button";
 import { NextArrow, PrevArrow } from "../Home";
 import { BsFillPlayFill } from "react-icons/bs";
 import { MdVolumeUp, MdVolumeOff } from "react-icons/md";
 import { HiDotsHorizontal, HiOutlinePaperAirplane } from "react-icons/hi";
 import { useParams } from "react-router-dom";
+import StoriesMore from "./StoriesMore";
 
 const StoriesItem = () => {
   const { username } = useParams();
+
+  const [storiesMore, setStoriesMore] = useState(false);
+  const hideStoriesMore = () => setStoriesMore(false);
 
   return (
     <div className="px-10 bg-transparent mx-auto my-auto relative">
@@ -39,12 +43,13 @@ const StoriesItem = () => {
               <Button>
                 <MdVolumeUp className="text-white font-medium" size={26} />
               </Button>
-              <Button>
+              <Button onClick={() => setStoriesMore(true)}>
                 <HiDotsHorizontal className="text-white font-medium" size={26} />
               </Button>
             </div>
           </div>
         </div>
+        {storiesMore && <StoriesMore hideStoriesMore={hideStoriesMore} />}
 
         <div className="absolute bottom-4 left-4 right-5 flex items-center">
           <div className="w-full bg-transparent border border-white/80 rounded-full">
