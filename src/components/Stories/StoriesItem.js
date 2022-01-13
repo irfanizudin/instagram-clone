@@ -6,12 +6,18 @@ import { MdVolumeUp, MdVolumeOff } from "react-icons/md";
 import { HiDotsHorizontal, HiOutlinePaperAirplane } from "react-icons/hi";
 import { useParams } from "react-router-dom";
 import StoriesMore from "./StoriesMore";
+import QuickReaction from "./QuickReaction";
 
 const StoriesItem = () => {
   const { username } = useParams();
 
   const [storiesMore, setStoriesMore] = useState(false);
   const hideStoriesMore = () => setStoriesMore(false);
+
+  const [reaction, setReaction] = useState(false);
+  const hideQuickReaction = () => setReaction(false);
+
+  const [text, setText] = useState("");
 
   return (
     <div className="px-10 bg-transparent mx-auto my-auto relative">
@@ -24,7 +30,7 @@ const StoriesItem = () => {
           className="object-cover w-full h-full"
         />
 
-        <div className="absolute top-4 left-4 right-5">
+        <div className="absolute top-4 left-4 right-4">
           <div className="h-[3px] rounded-lg bg-white "></div>
           <div className="w-full mt-3 flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -51,18 +57,25 @@ const StoriesItem = () => {
         </div>
         {storiesMore && <StoriesMore hideStoriesMore={hideStoriesMore} />}
 
-        <div className="absolute bottom-4 left-4 right-5 flex items-center">
-          <div className="w-full bg-transparent border border-white/80 rounded-full">
+        <div className="absolute bottom-4 left-4 right-4 flex items-center z-20">
+          <div className="w-full bg-transparent border border-white/80 rounded-full flex justify-between">
             <input
               type="text"
               placeholder={`Reply to ${username}...`}
               className="w-full bg-transparent placeholder-white/80 text-white/80 px-[16px] py-[12px] text-base outline-none"
+              onFocus={() => setReaction(true)}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
             />
+            {text !== "" && (
+              <Button className="text-base font-medium text-white pr-[16px] py-[12px]">Send</Button>
+            )}
           </div>
-          <Button className="ml-2">
+          <Button className={`${reaction && "hidden"} ml-2`}>
             <HiOutlinePaperAirplane className="text-white/80 font-medium" size={26} />
           </Button>
         </div>
+        {reaction && <QuickReaction hideQuickReaction={hideQuickReaction} />}
       </div>
     </div>
   );
