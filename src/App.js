@@ -33,6 +33,7 @@ const App = () => {
         <Route path="tagged" element={<Tagged />} />
       </Route>
       <Route path="/stories/:username/:id" element={<Stories />} />
+      <Route path="/stories/highlights/:id" element={<Stories />} />
     </Routes>
   );
 };

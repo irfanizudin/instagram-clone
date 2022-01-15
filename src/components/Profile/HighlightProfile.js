@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NextArrow, PrevArrow } from "./../Home";
+import { useNavigate } from "react-router-dom";
 
 const HighlightProfile = () => {
   const highlights = [
@@ -90,6 +91,8 @@ const HighlightProfile = () => {
     ],
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="h-[118px] w-full relative overflow-hidden mt-10">
       <Slider
@@ -99,7 +102,11 @@ const HighlightProfile = () => {
         {highlights &&
           highlights.map((highlight, index) => {
             return (
-              <div key={index} className="flex flex-col items-center justify-center cursor-pointer">
+              <div
+                onClick={() => navigate("/stories/highlights/1")}
+                key={index}
+                className="flex flex-col items-center justify-center cursor-pointer"
+              >
                 <div className="w-[64px] sm:w-[87px] aspect-square border border-gray-text/30 rounded-full overflow-hidden flex items-center justify-center">
                   <img
                     src={highlight.image}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../Common/Button";
 import { NextArrow, PrevArrow } from "../Home";
 import { BsFillPlayFill } from "react-icons/bs";
-import { MdVolumeUp, MdVolumeOff } from "react-icons/md";
+import { MdVolumeUp } from "react-icons/md";
 import { HiDotsHorizontal, HiOutlinePaperAirplane } from "react-icons/hi";
 import { useParams } from "react-router-dom";
 import StoriesMore from "./StoriesMore";
@@ -40,7 +40,7 @@ const StoriesItem = () => {
                 className="w-[30px] aspect-square rounded-full"
               />
               <p className="text-base font-medium text-white">{username}</p>
-              <p className="text-base font-medium text-gray-text">5h</p>
+              <p className="text-base font-medium text-white/50">5h</p>
             </div>
             <div className="flex items-center space-x-3">
               <Button>

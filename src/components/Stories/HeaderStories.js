@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 
 const HeaderStories = () => {
+  const { pathname } = useLocation();
+  const highlights = pathname.split("/").includes("highlights");
   return (
     <>
       <Link to="/" className="absolute top-4 left-4">
@@ -12,7 +14,7 @@ const HeaderStories = () => {
           className="object-contain w-[103px]"
         />
       </Link>
-      <Link to="/" className="absolute top-4 right-4">
+      <Link to={`${highlights ? "/johnDoe" : "/"} `} className="absolute top-4 right-4">
         <IoClose className="text-[30px] font-medium text-white" />
       </Link>
     </>
