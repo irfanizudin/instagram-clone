@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { HiHeart } from "react-icons/hi";
 import { BsFillChatFill } from "react-icons/bs";
 
-const ExplorePost = ({ image, liked, comment }) => {
+const ExplorePost = ({ image, liked, comment, onClick }) => {
   const [hover, setHover] = useState(false);
 
   return (
     <div
+      onClick={onClick}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className="max-w-[300px] mx-auto sm:max-w-[292px] aspect-square overflow-hidden cursor-pointer relative"

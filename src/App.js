@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import { Post, Reels, Videos, Saved, Tagged, Follower, Following } from "./components/Profile";
 import { Chat, ChatRoom, ChatGeneral, NewMessage } from "./components/Inbox";
 import Stories from "./pages/Stories";
+import PostDetail from "./pages/PostDetail";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
       </Route>
       <Route path="/stories/:username/:id" element={<Stories />} />
       <Route path="/stories/highlights/:id" element={<Stories />} />
+      <Route path="/p/:id" element={<PostDetail />} />
     </Routes>
   );
 };

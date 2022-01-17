@@ -1,5 +1,6 @@
 import React from "react";
 import { ExplorePost } from "../Explore";
+import { useNavigate } from "react-router-dom";
 
 const Post = () => {
   const Posts = [
@@ -40,12 +41,19 @@ const Post = () => {
     },
   ];
 
+  const navigate = useNavigate();
   return (
     <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-3">
       {Posts &&
         Posts.map((post, index) => {
           return (
-            <ExplorePost key={index} image={post.image} liked={post.liked} comment={post.comment} />
+            <ExplorePost
+              onClick={() => navigate("/p/1")}
+              key={index}
+              image={post.image}
+              liked={post.liked}
+              comment={post.comment}
+            />
           );
         })}
     </div>
