@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/Common/Button";
 import Layout from "../components/Layout/Layout";
 import {
@@ -11,17 +11,20 @@ import {
 import { FiSmile } from "react-icons/fi";
 
 const PostDetail = () => {
+  const [comment, setComment] = useState("");
+
   return (
-    <Layout>
-      <div className="grid grid-cols-3 h-[78vh] border border-gray-text/30">
-        <div className="col-span-2 bg-white overflow-hidden">
+    <Layout className="pt-28">
+      <div className="grid grid-cols-1 lg:grid-cols-3 h-[78vh] border border-gray-text/30">
+        <div className="lg:col-span-2 bg-white overflow-hidden">
           <img
             src="https://source.unsplash.com/collection/1103088/one-color"
             alt="post-detail"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="col-span-1 bg-white relative">
+
+        <div className="lg:col-span-1 bg-white relative order-first lg:order-last">
           <div className="w-full h-[60px] border-b border-gray-text/30 flex items-center justify-between p-4">
             <div className="flex items-center space-x-3">
               <img
@@ -38,7 +41,7 @@ const PostDetail = () => {
             </Button>
           </div>
 
-          <div className="w-full h-auto overflow-auto p-4">
+          <div className="hidden lg:block w-full h-auto overflow-auto p-4">
             <div className="flex items-start space-x-3">
               <img
                 src="https://randomuser.me/api/portraits/men/75.jpg"
@@ -56,7 +59,7 @@ const PostDetail = () => {
             </div>
           </div>
 
-          <div className="w-full h-[170px] absolute bottom-0 right-0 border-t border-gray-text/30 bg-white">
+          <div className="hidden lg:block w-full h-[170px] absolute bottom-0 right-0 border-t border-gray-text/30 bg-white">
             <div className="w-full h-full relative">
               <div className="w-full p-4 space-y-2">
                 <div className="flex items-center justify-between">
@@ -88,11 +91,67 @@ const PostDetail = () => {
                     type="text"
                     placeholder="Add a comment..."
                     className="w-full text-base outline-none"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
                     required
                   />
                 </div>
-                <Button>Post</Button>
+                <Button
+                  className={`${
+                    comment === "" ? "text-link/30 cursor-default" : "text-link"
+                  }  text-base font-medium`}
+                >
+                  Post
+                </Button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="block lg:hidden w-full h-[170px] border-t border-gray-text/30 bg-white">
+          <div className="w-full h-full relative">
+            <div className="w-full p-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between space-x-4">
+                  <Button>
+                    <HiOutlineHeart size={28} />
+                  </Button>
+                  <Button>
+                    <HiOutlineChat size={28} />
+                  </Button>
+                  <Button>
+                    <HiOutlinePaperAirplane size={28} />
+                  </Button>
+                </div>
+                <Button>
+                  <HiOutlineBookmark size={28} />
+                </Button>
+              </div>
+              <div className="flex items-center">
+                <p className="text-base font-medium">322 likes</p>
+              </div>
+              <p className="text-[10px] text-gray-text uppercase">10 minutes ago</p>
+            </div>
+
+            <div className="h-[53px] border-t border-gray-text/30 p-[16px] flex items-center justify-between absolute bottom-0 right-0 w-full">
+              <div className="flex items-center w-full space-x-4">
+                <FiSmile size={28} />
+                <input
+                  type="text"
+                  placeholder="Add a comment..."
+                  className="w-full text-base outline-none"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  required
+                />
+              </div>
+              <Button
+                className={`${
+                  comment === "" ? "text-link/30 cursor-default" : "text-link"
+                }  text-base font-medium`}
+              >
+                Post
+              </Button>
             </div>
           </div>
         </div>
