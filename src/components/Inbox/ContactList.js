@@ -73,7 +73,7 @@ const ContactList = () => {
         </Button>
       </div>
 
-      <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 space-x-4">
+      <div className="w-full h-[50px] flex items-center border-b border-gray-text/30 space-x-4 ">
         <Button
           onClick={() => navigate("inbox")}
           className={`${
@@ -105,7 +105,7 @@ const ContactList = () => {
                 <img
                   src={contact.image}
                   alt="profile"
-                  className="w-[55px] aspect-square rounded-full"
+                  className="w-[55px] aspect-square rounded-full "
                 />
                 <div className="flex flex-col justify-center ml-4">
                   <p className="">{contact.name}</p>

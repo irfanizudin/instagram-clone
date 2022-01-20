@@ -10,7 +10,7 @@ const Stories = () => {
 
   return (
     <div className="w-screen h-screen bg-black flex relative p-[16px] overflow-hidden">
-      <div className="">
+      <div className="hidden sm:block">
         <HeaderStories />
       </div>
       {highlights ? <HighlightStories /> : <StoriesItem />}

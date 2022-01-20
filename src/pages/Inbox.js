@@ -8,11 +8,11 @@ const Inbox = () => {
   const direct = pathname.split("/").includes("direct");
   return (
     <>
-      <Layout className="grid h-screen grid-cols-3 pt-24 ">
-        <div className="col-span-1">
+      <Layout className="grid h-screen grid-cols-1 md:grid-cols-3 pt-24 ">
+        <div className="md:col-span-1">
           <ContactList />
         </div>
-        <div className="col-span-2">
+        <div className="md:col-span-2 hidden md:block">
           <Outlet />
         </div>
         {direct ? "" : <Outlet />}
