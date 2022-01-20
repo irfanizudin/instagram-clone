@@ -14,7 +14,7 @@ const PostDetail = () => {
   const [comment, setComment] = useState("");
 
   return (
-    <Layout className="pt-28">
+    <Layout className="pt-14 sm:pt-16">
       <div className="grid grid-cols-1 lg:grid-cols-3 h-[78vh] border border-gray-text/30">
         <div className="lg:col-span-2 bg-white overflow-hidden">
           <img

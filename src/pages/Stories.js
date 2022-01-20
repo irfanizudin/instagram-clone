@@ -9,8 +9,10 @@ const Stories = () => {
   const highlights = pathname.split("/").includes("highlights");
 
   return (
-    <div className="w-screen h-screen bg-black flex relative p-[16px]">
-      <HeaderStories />
+    <div className="w-screen h-screen bg-black flex relative p-[16px] overflow-hidden">
+      <div className="">
+        <HeaderStories />
+      </div>
       {highlights ? <HighlightStories /> : <StoriesItem />}
     </div>
   );

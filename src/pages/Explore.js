@@ -43,7 +43,7 @@ const Explore = () => {
   ];
 
   return (
-    <Layout className="pt-28 sm:pt-28">
+    <Layout className="pt-[100px] sm:pt-[100px]">
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {Posts &&
           Posts.map((post, index) => {

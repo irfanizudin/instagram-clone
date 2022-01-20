@@ -8,7 +8,7 @@ const Inbox = () => {
   const direct = pathname.split("/").includes("direct");
   return (
     <>
-      <Layout className="grid h-screen grid-cols-3">
+      <Layout className="grid h-screen grid-cols-3 pt-24 ">
         <div className="col-span-1">
           <ContactList />
         </div>
