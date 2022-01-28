@@ -1,7 +1,9 @@
 import React from "react";
 import Modal from "./../Common/Modal";
+import { useNavigate } from "react-router-dom";
 
 const PostMore = ({ hidePostMore }) => {
+  const navigate = useNavigate();
   return (
     <Modal onClick={hidePostMore} className="overflow-hidden">
       <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">
@@ -10,7 +12,10 @@ const PostMore = ({ hidePostMore }) => {
       <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">
         <p className="text-base font-semibold text-liked">Unfollow</p>
       </div>
-      <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">
+      <div
+        onClick={() => navigate("/p/1")}
+        className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100"
+      >
         <p className="text-base ">Go to Post</p>
       </div>
       <div className="w-full py-[14px] border-b border-gray-text/30 flex items-center justify-center cursor-pointer hover:bg-gray-100">

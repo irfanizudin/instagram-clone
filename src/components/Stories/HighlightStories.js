@@ -11,7 +11,7 @@ const HighlightStories = () => {
   const hideStoriesMore = () => setStoriesMore(false);
 
   return (
-    <div className="px-10 bg-transparent mx-auto my-auto relative">
+    <div className="md:px-10 bg-transparent mx-auto my-auto relative">
       <PrevArrow />
       <NextArrow />
       <div className="w-[360px] h-[640px] bg-white mx-auto rounded-lg overflow-hidden relative">
