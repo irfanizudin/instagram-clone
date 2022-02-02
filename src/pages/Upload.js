@@ -9,7 +9,6 @@ const Upload = () => {
       <MetaTag
         title="Upload - Instagram Clone"
         description="Upload - Instagram Clone by Irfan Izudin"
-        image="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
       />
       <Layout className="flex items-center justify-center">
         <NewPost />

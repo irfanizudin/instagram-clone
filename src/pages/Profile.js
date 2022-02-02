@@ -12,7 +12,6 @@ const Profile = () => {
       <MetaTag
         title="Profile - Instagram Clone"
         description="Profile - Instagram Clone by Irfan Izudin"
-        image="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
       />
       <Layout className="pt-[100px] sm:pt-[100px]">
         <HeaderProfile username={username} />

@@ -51,7 +51,6 @@ const Explore = () => {
       <MetaTag
         title="Explore - Instagram Clone"
         description="Explore - Instagram Clone by Irfan Izudin"
-        image="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
       />
       <Layout className="pt-[100px] sm:pt-[100px]">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">

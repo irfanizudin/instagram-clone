@@ -27,11 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <MetaTag
-        title="Instagram Clone"
-        description="HomePage - Instagram Clone by Irfan Izudin"
-        image="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
-      />
+      <MetaTag title="Instagram Clone" description="HomePage - Instagram Clone by Irfan Izudin" />
       <Layout className="grid grid-cols-3 space-x-6 pt-14 sm:pt-16">
         <div className="col-span-3 lg:col-span-2 space-y-1 lg:space-y-6">
           <Stories />

@@ -12,7 +12,6 @@ const Inbox = () => {
       <MetaTag
         title="Inbox - Instagram Clone"
         description="Inbox - Instagram Clone by Irfan Izudin"
-        image="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png"
       />
       <Layout className="grid h-screen grid-cols-1 md:grid-cols-3 pt-24 ">
         <div className="md:col-span-1">
